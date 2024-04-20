@@ -1,6 +1,6 @@
 import spacy 
 from collections import Counter
-import re
+import re                 
 
 file= open('paragraphs.txt')
 text= file.read()
@@ -8,7 +8,8 @@ text= file.read()
 nlp = spacy.load("en_core_web_sm")
 sw_spacy = nlp.Defaults.stop_words
 words = [word for word in text.split() if word.lower() not in sw_spacy]
-new_text = " ".join(words)   
+new_text = " ".join(words)    
+
 
 def freq(new_text):
     lowertxt= new_text.lower()
